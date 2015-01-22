@@ -53,6 +53,7 @@ body {
 	color            : $black;
 
 	@include bgopacity($white);
+
 }
 
 .blocked {
