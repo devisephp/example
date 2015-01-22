@@ -1,0 +1,112 @@
+<html>
+
+<head>
+
+	<title>Brewers &amp; Beers | Devise Demo Website</title>
+	<meta name="description" content="This is a demo website for Devise development examples and a sandbox to experiment in">
+
+	<link rel="stylesheet" type="text/css" href="css/brewers-and-beers.css">
+
+</head>
+
+<body id="index">
+
+<div id="navigation" class="op80 sp40 pt pb tac">
+	<div>
+		<a href="#">Breweries</a>
+		<a href="#" class="middle-logo"><img src="img/logo-navigation.gif" width="161" height="70" alt="Devise: Example Application"></a>
+		<a href="#">Beers</a>
+	</div>
+</div>
+
+
+<div class="container pb pt sp100">
+
+	<div class="row mb sp100">
+		<div class="col-md-6">
+			<h3 class="lato">Beers <span>| Create new</h3>
+			<p>Bacon ipsum dolor amet meatball tenderloin bresaola doner landjaeger salami rump boudin jowl shoulder drumstick pancetta shankle spare ribs. Kevin short loin corned beef hamburger jerky shank. </p>
+			<a href="#" class="btn btn-info fl mr sp50">Back to all beers</a>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+
+			<div class="alert alert-warning" role="alert">
+				<strong>Warning!</strong> Better check yourself, you're not looking too good.<br><br>
+
+				<ul>
+					<li>Error #1</li>
+					<li>Error #2</li>
+					<li>Error #3</li>
+				</ul>
+			</div>
+
+			<form method="post" action="#" class="form-vertical">
+				<div class="form-group">
+					<label for="beer-name">Beer Name</label>
+					<input type="text" class="form-control" id="beer-name" name="name">
+				</div>
+
+				<div class="row">
+
+					<div class="form-group col-md-5">
+						<label for="beer-brewery">Brewery</label>
+						<select class="form-control" id="beer-brewery" name="brewery">
+							<option value="">Select a Brewery</option>
+							<option value="Alabama">Alabama</option>
+						</select>
+					</div>
+
+					<div class="form-group col-md-5">
+						<label for="beer-type">Type</label>
+						<select class="form-control" id="beer-type" name="type">
+							<option value="">Select a Type</option>
+							<option value="Alabama">IPA</option>
+						</select>
+					</div>
+
+					<div class="form-group col-md-2">
+						<label for="beer-abv">ABV</label>
+						<input type="text" class="form-control" id="beer-abv" name="abv">
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="form-group col-md-5">
+						<label for="beer-advocate-rating">Beer Advocate Rating</label>
+						<input type="text" class="form-control" id="beer-advocate-rating" name="beer_advocate_rating">
+					</div>
+
+					<div class="form-group col-md-5 col-md-offset-2">
+						<label for="beer-rate-beer-rating">Rate Beer Rating</label>
+						<input type="text" class="form-control" id="beer-rate-beer-rating" name="rate_beer_rating">
+					</div>
+
+				</div>
+
+				<div class="form-group">
+					<label for="brewery-about">About the Brewery</label>
+					<textarea id="brewery-about" class="form-control" name="about"></textarea>
+				</div>
+
+				<h1>NEED A IMAGE UPLOAD</h1>
+
+				<button type="submit" class="btn btn-primary">Create Brewery</button>
+			</form>
+		</div>
+	</div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.14/jquery.scrollTo.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.3.5/jquery.localScroll.min.js"></script>
+<script src="js/brewers-and-beers.js"></script>
+
+</body>
+</html>
