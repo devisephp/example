@@ -1,0 +1,59 @@
+<html>
+
+<head>
+
+	<title>Brewers &amp; Beers | Devise Demo Website</title>
+	<meta name="description" content="This is a demo website for Devise development examples and a sandbox to experiment in">
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+	<link rel="stylesheet" type="text/css" href="/css/brewers-and-beers.css">
+
+</head>
+
+<body id="show" style="background-image:url('img/example-brewery-header.jpg')">
+
+<div class="container pt sp500">
+
+	<div class="row dark pt sp80 op90">
+		<div class="col-md-10 col-md-offset-1">
+			<h3 class="lato">Dog Fish Head Brewing Company</h3>
+			<a href="#" class="btn btn-info mt sp20">Back to all breweries</a>
+
+			<div class="row sp50 mt">
+
+				<div class="col-md-8">
+					<p>Chicken turkey kielbasa, pig swine bresaola ham hock turducken corned beef beef ribs kevin beef jerky cow. Filet mignon chicken bresaola turducken. Turkey prosciutto flank, short loin ribeye porchetta cupim venison doner kevin strip steak drumstick tri-tip pancetta chuck. Venison short loin chicken, jowl leberkas ball tip prosciutto sirloin hamburger cupim shoulder turducken pork chop bresaola. Short loin boudin jerky shoulder. Chicken andouille rump ball tip kevin.</p>
+
+					<p>Turducken bacon tail jerky pastrami. Picanha ball tip meatball, leberkas pork loin rump shank frankfurter bacon pork belly kielbasa ham hock salami shoulder. Shank porchetta pig pork chop jowl frankfurter strip steak venison kielbasa cupim salami. Rump turkey swine ham bresaola. Short loin turducken corned beef landjaeger beef picanha cow sausage beef ribs frankfurter brisket hamburger tongue chicken. Jerky frankfurter salami beef ribs andouille tri-tip short loin. Flank shank spare ribs pork belly boudin salami sirloin turkey frankfurter short loin.</p>
+
+					<div class="row">
+						<ul class="col-md-12" id="show-gallery">
+							<li><a href="/img/example-show-1.jpg" data-lightbox="beer-gallery"><img src="/img/example-show-1-thumb.jpg"></a></li>
+							<li><a href="/img/example-show-2.jpg" data-lightbox="beer-gallery"><img src="/img/example-show-2-thumb.jpg"></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-md-offset-1">
+					<p>
+						6 Cannery Village Center<br>
+						Milton, DE 19968
+					</p>
+
+					<a href="#" class="btn btn-primary">Visit Website</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.14/jquery.scrollTo.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.3.5/jquery.localScroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script src="/js/brewers-and-beers.js"></script>
+
+</body>
+</html>
