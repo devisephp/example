@@ -6388,6 +6388,9 @@ a {
     color: #f0f0f0;
     text-decoration: none; }
 
+dd {
+  margin-bottom: 15px; }
+
 #navigation {
   width: 100%;
   position: fixed;

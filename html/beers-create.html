@@ -24,9 +24,9 @@
 
 	<div class="row mb sp100">
 		<div class="col-md-6">
-			<h3 class="lato">Breweries <span>| Create new</h3>
+			<h3 class="lato">Beers <span>| Create new</h3>
 			<p>Bacon ipsum dolor amet meatball tenderloin bresaola doner landjaeger salami rump boudin jowl shoulder drumstick pancetta shankle spare ribs. Kevin short loin corned beef hamburger jerky shank. </p>
-			<a href="#" class="btn btn-info fl mr sp50">Back to all breweries</a>
+			<a href="#" class="btn btn-info fl mr sp50">Back to all beers</a>
 		</div>
 	</div>
 
@@ -46,35 +46,47 @@
 
 			<form method="post" action="#" class="form-vertical">
 				<div class="form-group">
-					<label for="brewery-name">Brewery Name</label>
-					<input type="text" class="form-control" id="brewery-name" name="name">
+					<label for="beer-name">Beer Name</label>
+					<input type="text" class="form-control" id="beer-name" name="name">
 				</div>
 
 				<div class="row">
 
 					<div class="form-group col-md-5">
-						<label for="brewery-city">City</label>
-						<input type="text" class="form-control" id="brewery-city" name="city">
-					</div>
-
-					<div class="form-group col-md-4">
-						<label for="brewery-state">State</label>
-						<select class="form-control" id="brewery-state" name="state">
-							<option value="">Select a State</option>
+						<label for="beer-brewery">Brewery</label>
+						<select class="form-control" id="beer-brewery" name="brewery">
+							<option value="">Select a Brewery</option>
 							<option value="Alabama">Alabama</option>
 						</select>
 					</div>
 
-					<div class="form-group col-md-3 has-warning">
-						<label for="brewery-zip">Zipcode</label>
-						<input type="text" class="form-control" id="brewery-zip" name="zipcode">
+					<div class="form-group col-md-5">
+						<label for="beer-type">Type</label>
+						<select class="form-control" id="beer-type" name="type">
+							<option value="">Select a Type</option>
+							<option value="Alabama">IPA</option>
+						</select>
+					</div>
+
+					<div class="form-group col-md-2">
+						<label for="beer-abv">ABV</label>
+						<input type="text" class="form-control" id="beer-abv" name="abv">
 					</div>
 
 				</div>
 
-				<div class="form-group">
-					<label for="brewery-website">Website</label>
-					<input type="text" class="form-control" id="brewery-website" name="url">
+				<div class="row">
+
+					<div class="form-group col-md-5">
+						<label for="beer-advocate-rating">Beer Advocate Rating</label>
+						<input type="text" class="form-control" id="beer-advocate-rating" name="beer_advocate_rating">
+					</div>
+
+					<div class="form-group col-md-5 col-md-offset-2">
+						<label for="beer-rate-beer-rating">Rate Beer Rating</label>
+						<input type="text" class="form-control" id="beer-rate-beer-rating" name="rate_beer_rating">
+					</div>
+
 				</div>
 
 				<div class="form-group">
@@ -82,7 +94,7 @@
 					<textarea id="brewery-about" class="form-control" name="about"></textarea>
 				</div>
 
-
+				<h1>NEED A IMAGE UPLOAD</h1>
 
 				<button type="submit" class="btn btn-primary">Create Brewery</button>
 			</form>
