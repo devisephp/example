@@ -6371,7 +6371,7 @@ h5 {
   font-size: 24px; }
 
 h6 {
-  font-size: 21px; }
+  font-size: 18px; }
 
 p {
   line-height: 28px;
@@ -6495,6 +6495,18 @@ dd {
   -webkit-column-gap: 100px;
   -moz-column-gap: 100px;
   column-gap: 100px; }
+
+.index-gallery .artwork {
+  padding: 1px;
+  width: 195px;
+  background-color: #4a4a4a;
+  background-image: -webkit-linear-gradient(-360deg, #4a4a4a 0%, #4a4a4a 20%, #9d9c9c 50%, #4a4a4a 80%, #4a4a4a 100%);
+  background-image: linear-gradient(90deg,#4a4a4a 0%, #4a4a4a 20%, #9d9c9c 50%, #4a4a4a 80%, #4a4a4a 100%); }
+
+.beer p {
+  font-size: 14px; }
+  .beer p span {
+    font-size: 12px; }
 
 #show {
   background-repeat: no-repeat;
