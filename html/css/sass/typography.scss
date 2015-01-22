@@ -1,0 +1,45 @@
+body {
+	font-family      : Lato, Tahoma, Arial, sans-serif;
+	font-size        : 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform   : uppercase;
+	font-family      : Montserrat, Lato, Tahoma, Arial, sans-serif;
+	font-weight      : 900;
+	letter-spacing   : -0.05em;
+
+	span  { font-weight  : 100;  }
+	small { font-size    : 14px; letter-spacing: 0em; }
+
+	&.lato {
+		font-family  : Lato, Tahoma, Arial, sans-serif;
+	}
+}
+
+h1 { font-size : $h1-font-size         }
+h2 { font-size : $h1-font-size * 0.8   }
+h3 { font-size : $h1-font-size * 0.625 }
+h4 { font-size : $h1-font-size * 0.5   }
+h5 { font-size : $h1-font-size * 0.4   }
+h6 { font-size : $h1-font-size * 0.35  }
+
+p {
+	line-height   : 28px;
+	margin-bottom : 40px;
+}
+
+label {
+	color         : $gray;
+	font-weight   : normal;
+}
+
+a {
+	color               : $gray;
+	text-decoration     : none;
+
+	&:hover {
+		color           : $white;
+		text-decoration : none;
+	}
+}

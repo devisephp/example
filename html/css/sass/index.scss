@@ -1,0 +1,28 @@
+#index {
+	background  : $black url('../img/default-header.jpg') no-repeat center -700px;
+	padding-top : 400px;
+}
+
+.index-list {
+	h4 {
+		margin-top       : 36px;
+
+		&:first-child {
+			margin-top   : 0;
+		}
+	}
+
+	a {
+		display          : block;
+		margin-bottom    : 12px;
+	}
+
+	&.col-2 {
+		 @include columns(2 16em);
+	}
+
+	&.col-3 {
+		 @include columns(3 16em);
+		 @include column-gap(100px);
+	}
+}
