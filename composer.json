@@ -6,13 +6,18 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"devisephp/cms": "*"
+		"devisephp/cms": "*",
+		"intervention/image": "~2.0"
+	},
+	"require-dev": {
+		"fzaninotto/faker": "*"
 	},
 	"autoload": {
 		"classmap": [
 			"app/commands",
 			"app/controllers",
 			"app/models",
+			"app/repositories",
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"

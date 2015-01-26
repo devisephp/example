@@ -41,7 +41,15 @@ devise.define(['jquery', 'dvsListeners'], (function( $, listeners ) {
     }
 
     function appendDom(wrapper) {
-        $('body').wrapInner(wrapper);
+
+        var _body = $('body');
+        var _documentHeight = $(document).height();
+
+        if (_body.height() < _documentHeight) {
+            _body.css('height', _documentHeight);
+        }
+
+        _body.wrapInner(wrapper);
         $('#dvs-mode').data('dvs-page-id', pageId);
         $('#dvs-mode').data('dvs-page-version-id', pageVersionId);
     }

@@ -15,6 +15,7 @@ ClassLoader::addDirectories(array(
 
 	app_path().'/commands',
 	app_path().'/controllers',
+	app_path().'/repositories',
 	app_path().'/models',
 	app_path().'/database/seeds',
 
@@ -79,3 +80,16 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/*
+|--------------------------------------------------------------------------
+| Require The Macros File
+|--------------------------------------------------------------------------
+|
+| Next we will load the macros file for the application. This gives us
+| a nice separate location to store our macro definitions instead of
+| putting them all in the main routes file.
+|
+*/
+
+require app_path().'/macros.php';

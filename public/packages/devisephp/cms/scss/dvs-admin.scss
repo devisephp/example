@@ -1,0 +1,13 @@
+@import "main-ui/reset";
+
+.hide,
+.cantsee,
+.hidden {
+  display:none !important;
+}
+
+.show,
+.cansee,
+.nothidden {
+  display:inherit !important;
+}

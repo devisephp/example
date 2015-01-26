@@ -15,9 +15,15 @@ class CreateBeersTable extends Migration {
 		Schema::create('beers', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('brewery_id')->unsigned();
-			$table->integer('style_id')->unsigned();
+			$table->integer('brewer_id')->unsigned();
+			$table->integer('beer_style_id')->unsigned();
 			$table->string('name');
+			$table->string('abv');
+			$table->string('advocate_rating');
+			$table->string('rating');
+			$table->text('about');
+			$table->text('image_url');
+			$table->text('thumbnail_url');
 			$table->timestamps();
 		});
 	}

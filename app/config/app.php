@@ -122,6 +122,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Devise\DeviseServiceProvider',
+		'Intervention\Image\ImageServiceProvider',
 
 	),
 
@@ -195,6 +196,8 @@ return array(
         'Sort'            => 'Devise\Support\Sortable\SortableFacade',
         'DeviseUser'      => 'Devise\Users\DeviseUser',
         'RuleManager'     => 'Devise\Users\Permissions\RuleManagerFacade',
+
+        'Image'			  => 'Intervention\Image\Facades\Image',
 	),
 
 );

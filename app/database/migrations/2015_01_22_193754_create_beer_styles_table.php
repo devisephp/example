@@ -12,7 +12,7 @@ class CreateBeerStylesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('styles', function(Blueprint $table)
+		Schema::create('beer_styles', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('name');
@@ -27,7 +27,7 @@ class CreateBeerStylesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('styles');
+		Schema::drop('beer_styles');
 	}
 
 }

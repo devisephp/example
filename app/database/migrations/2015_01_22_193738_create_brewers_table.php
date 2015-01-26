@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBreweryImagesTable extends Migration {
+class CreateBrewersTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,13 @@ class CreateBreweryImagesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('brewery_images', function(Blueprint $table)
+		Schema::create('brewers', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('brewery_id')->unsigned();
-			$table->string('path');
-			$table->string('url');
+			$table->text('address');
+			$table->text('description');
+			$table->string('name');
+			$table->text('website');
 			$table->timestamps();
 		});
 	}
@@ -29,7 +30,7 @@ class CreateBreweryImagesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('brewery_images');
+		Schema::drop('brewers');
 	}
 
 }
