@@ -66,6 +66,15 @@
   .dvs-advanced.open {
     height: auto; }
 
+.tac {
+  text-align: center; }
+
+.tal {
+  text-align: left; }
+
+.tar {
+  text-align: right; }
+
 .clearfix, .row {
   zoom: 1; }
   .clearfix:before, .row:before, .clearfix:after, .row:after {

@@ -43,10 +43,14 @@ devise.define(['jquery', 'dvsListeners'], (function( $, listeners ) {
     function appendDom(wrapper) {
 
         var _body = $('body');
+        var _bodyStyle = $('body').attr('style');
         var _documentHeight = $(document).height();
 
         if (_body.height() < _documentHeight) {
-            _body.css('height', _documentHeight);
+            _body.attr(
+                'style',
+                ' height:' + _documentHeight + 'px!important; ' + _bodyStyle
+            );
         }
 
         _body.wrapInner(wrapper);

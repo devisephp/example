@@ -123,6 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Devise\DeviseServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
+		'Clockwork\Support\Laravel\ClockworkServiceProvider',
 
 	),
 
@@ -198,6 +199,8 @@ return array(
         'RuleManager'     => 'Devise\Users\Permissions\RuleManagerFacade',
 
         'Image'			  => 'Intervention\Image\Facades\Image',
+        'Clockwork'  	  => 'Clockwork\Support\Laravel\Facade',
+
 	),
 
 );

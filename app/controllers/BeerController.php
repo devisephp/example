@@ -74,10 +74,11 @@ class BeerController extends BaseController
 
 		if ($image)
 		{
+			// revisit this with Devise Media Manager later
 			$image = Image::make($image);
 
-			$beer->image_url = '/uploaded/images/beers/beer_' . $beer->id . '.jpg';
-			$beer->thumbnail_url = '/uploaded/images/beers/beer_' . $beer->id . '_thumbnail.jpg';
+			$beer->image_url = '/media/beers/beer_' . $beer->id . '.jpg';
+			$beer->thumbnail_url = '/media/beers/beer_' . $beer->id . '_thumbnail.jpg';
 
 			$image->save(public_path() . $beer->image_url);
 			$image->resize(100, 100)->save(public_path() . $beer->thumbnail_url);

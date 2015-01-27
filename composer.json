@@ -10,7 +10,8 @@
 		"intervention/image": "~2.0"
 	},
 	"require-dev": {
-		"fzaninotto/faker": "*"
+		"fzaninotto/faker": "*",
+		"itsgoingd/clockwork": "1.*"
 	},
 	"autoload": {
 		"classmap": [
