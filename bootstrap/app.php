@@ -41,6 +41,19 @@ $app->singleton(
 	'App\Exceptions\Handler'
 );
 
+
+/*
+|--------------------------------------------------------------------------
+| Return Macros
+|--------------------------------------------------------------------------
+|
+| This macros file will have functions/methods that we make use of
+| inside of our application. Helper functions such as lorem() which
+| spits out some random lorem ipsum text
+|
+*/
+require __DIR__ . '/macros.php';
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application

@@ -136,6 +136,9 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 
+		'Devise\DeviseServiceProvider',
+		'Intervention\Image\ImageServiceProviderLaravel5',
+
 		/*
 		 * Application Service Providers...
 		 */
@@ -193,6 +196,13 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 
+		'Form' 		=> 'Illuminate\Html\FormFacade',
+		'HTML' 		=> 'Illuminate\Html\HtmlFacade',
+        'Sort'      => 'Devise\Support\Sortable\SortableFacade',
+        'DeviseUser'=> 'Devise\Users\DeviseUser',
+        'RuleManager'=> 'Devise\Users\Permissions\RuleManagerFacade',
+        'Image'		=> 'Intervention\Image\Facades\Image',
+        'Clockwork' => 'Clockwork\Support\Laravel\Facade',
 	],
 
 ];

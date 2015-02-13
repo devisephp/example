@@ -1,9 +1,6 @@
 <?php
 
-use Illuminate\Database\Seeder;
-use Illuminate\Database\Eloquent\Model;
-
-class DatabaseSeeder extends Seeder {
+class DatabaseSeeder extends DeviseSeeder {
 
 	/**
 	 * Run the database seeds.
@@ -12,9 +9,26 @@ class DatabaseSeeder extends Seeder {
 	 */
 	public function run()
 	{
-		Model::unguard();
+		Eloquent::unguard();
 
-		// $this->call('UserTableSeeder');
+		$this->call('PagesSeeder');
+		$this->call('BrewersSeeder');
+		$this->call('BeerStylesSeeder');
+		$this->call('BeersSeeder');
 	}
 
+	/**
+	 * Creates a faker object for us
+	 *
+	 * @param  integer $seed
+	 * @return Faker
+	 */
+	protected function faker($seed = 42)
+	{
+		$faker = Faker\Factory::create();
+
+		$faker->seed(42);
+
+		return $faker;
+	}
 }

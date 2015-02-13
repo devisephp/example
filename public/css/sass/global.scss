@@ -1,0 +1,120 @@
+/* Helper Styles */
+.mb  { margin-bottom:16px;  @include makespace('margin-bottom'); }
+.mt  { margin-top:16px; @include makespace('margin-top'); }
+.ml  { margin-left:16px;  @include makespace('margin-left'); }
+.mr  { margin-right:16px;  @include makespace('margin-right'); }
+.mz  { margin:0 }
+.mlz { margin-left:0 }
+.mrz { margin-right:0 }
+.mbz { margin-bottom:0 }
+.mtz { margin-top:0 }
+.pb  { padding-bottom:16px; @include makespace('padding-bottom'); }
+.pt  { padding-top:16px; @include makespace('padding-top'); }
+.pl  { padding-left:16px; @include makespace('padding-left'); }
+.pr  { padding-right:16px; @include makespace('padding-right'); }
+.pz  { padding:0 }
+.plz { padding-left:0 }
+.prz { padding-right:0 }
+.pbz { padding-bottom:0 !important }
+.ptz { padding-top:0 }
+
+.tal { text-align: left; }
+.tac { text-align: center; }
+.tar { text-align: right; }
+
+.btz { border-top:0 !important; }
+.blz { border-left:0 !important; }
+.bbz { border-bottom:0 !important; }
+.brz { border-right:0 !important; }
+.bz  { border:0 !important; }
+
+.abs { position: absolute }
+.rel { position: relative }
+.fix { position: fixed }
+.inline-block { display:inline-block }
+
+.cb  { clear:both }
+.fl  { float:left }
+.fr  { float:right }
+
+.opacity { @include opacity(); }
+
+.dark,
+body {
+	background-color : $black;
+	color            : $white;
+	padding-bottom   : 100px;
+
+	@include bgopacity($black);
+}
+
+.light {
+	background-color : $white;
+	color            : $black;
+
+	@include bgopacity($white);
+
+}
+
+.blocked {
+	border-top       : 2px solid #878787;
+	border-bottom    : 2px solid #878787;
+	padding-top      : 50px;
+	padding-bottom   : 50px;
+}
+
+.btn {
+	border-radius    : 0px;
+	background-color : $red;
+	color            : $white;
+	text-transform   : uppercase;
+	border-width     : 0;
+	font-size        : 11px;
+	padding          : 12px 24px;
+	cursor           : pointer;
+
+	&:hover {
+		background-color : lighten($red, 5%);
+	}
+
+	&.btn-info {
+		background-color: $info-btn-gray;
+
+		&:hover {
+			background-color : lighten($info-btn-gray, 5%);
+		}
+	}
+}
+
+input[type=text],
+select,
+textarea {
+
+	&.form-control {
+		background-color : $light-black;
+		border-color     : $light-black;
+		color            : $white;
+		font-size        : 24px;
+		padding          : 10px 22px;
+		height           : auto;
+	}
+}
+
+.has-warning {
+	input[type=text],
+	select,
+	textarea {
+		border-color : $yellow;
+	}
+}
+
+select {
+
+	&.form-control {
+		height: 55px;
+	}
+}
+
+.form-group {
+	margin-bottom:30px;
+}

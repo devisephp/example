@@ -5,11 +5,15 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "5.0.*"
+		"laravel/framework": "5.0.*",
+		"devisephp/cms": "*",
+		"intervention/image": "~2.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
-		"phpspec/phpspec": "~2.1"
+		"phpspec/phpspec": "~2.1",
+		"fzaninotto/faker": "*",
+		"itsgoingd/clockwork": "1.*"
 	},
 	"autoload": {
 		"classmap": [
