@@ -138,6 +138,7 @@ return [
 
 		'Devise\DeviseServiceProvider',
 		'Intervention\Image\ImageServiceProviderLaravel5',
+		'Clockwork\Support\Laravel\ClockworkServiceProvider',
 
 		/*
 		 * Application Service Providers...
