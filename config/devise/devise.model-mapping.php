@@ -1,6 +1,6 @@
 <?php return [
 
-	'Brewer' => [
+	'App\Brewer' => [
 		'rules' => [
 			'address' => 'required',
 			'description' => 'required',
@@ -25,7 +25,7 @@
 
 
 
-	'BrewerImage' => [
+	'App\BrewerImage' => [
 		'rules' => [],
 		'picks' => [],
 		'types' => [],
