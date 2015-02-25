@@ -1,33 +1,39 @@
 <?php return [
 
-	'App\Brewer' => [
-		'rules' => [
-			'address' => 'required',
-			'description' => 'required',
+	/*
+	|--------------------------------------------------------------------------
+	| DvsUser
+	|--------------------------------------------------------------------------
+	|
+	| This configuration is used to map attributes of the DvsUser Eloquent
+	| model to fields in devise. This allows us to change the model attributes
+	| using our front end editor in devise. This is also used in e2e testing
+	| for testing purposes. It is okay to remove this mapping in your
+	| application though.
+	|
+	*/
+
+	'DvsUser' =>
+	[
+		'rules' =>
+		[
 			'name' => 'required',
-			'website' => 'required',
+			'email' => 'email|required',
+			'password' => 'required',
 		],
 
-		'picks' => [
-			'Address' => ['address' => 'text'],
-			'Description' => ['description' => 'text'],
+		'picks' =>
+		[
 			'Name' => ['name' => 'text'],
-			'Website' => ['website' => 'url'],
+			'Email' => ['email' => 'text'],
+			'Password' => ['password' => 'text'],
 		],
 
-		'types' => [
-			'Address' => 'wysiwyg',
-			'Description' => 'wysiwyg',
+		'types' =>
+		[
 			'Name' => 'text',
-			'Website' => 'link',
+			'Email' => 'text',
+			'Password' => 'text',
 		],
-	],
-
-
-
-	'App\BrewerImage' => [
-		'rules' => [],
-		'picks' => [],
-		'types' => [],
 	],
 ];

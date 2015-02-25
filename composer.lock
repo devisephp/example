@@ -124,16 +124,16 @@
         },
         {
             "name": "devisephp/cms",
-            "version": "0.9.1",
+            "version": "0.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devisephp/cms.git",
-                "reference": "b3d1c1f0b02d2d68ed16d99fd4e21ad397ca73fa"
+                "reference": "23911da84cd81c7e37c459a34e9bde16727ecf54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devisephp/cms/zipball/b3d1c1f0b02d2d68ed16d99fd4e21ad397ca73fa",
-                "reference": "b3d1c1f0b02d2d68ed16d99fd4e21ad397ca73fa",
+                "url": "https://api.github.com/repos/devisephp/cms/zipball/23911da84cd81c7e37c459a34e9bde16727ecf54",
+                "reference": "23911da84cd81c7e37c459a34e9bde16727ecf54",
                 "shasum": ""
             },
             "require": {
@@ -146,7 +146,7 @@
                 "zencoder/zencoder-php": "*"
             },
             "require-dev": {
-                "laravel/framework": "5.0.*@dev",
+                "laravel/framework": "5.0.*",
                 "mikey179/vfsstream": "*",
                 "mockery/mockery": "dev-master",
                 "phpunit/phpunit": "*"
@@ -171,7 +171,7 @@
                 }
             ],
             "description": "Content Management System riding on top of the Laravel Framework",
-            "time": "2015-02-12 00:53:01"
+            "time": "2015-02-17 22:28:27"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -681,16 +681,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.0.4",
+            "version": "v5.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "b5eafda7dba3d1367a63095b83a068a73d32d97f"
+                "reference": "43637b796f1ac0b1a960984231251ff04b438006"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/b5eafda7dba3d1367a63095b83a068a73d32d97f",
-                "reference": "b5eafda7dba3d1367a63095b83a068a73d32d97f",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/43637b796f1ac0b1a960984231251ff04b438006",
+                "reference": "43637b796f1ac0b1a960984231251ff04b438006",
                 "shasum": ""
             },
             "require": {
@@ -802,7 +802,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-02-11 20:37:48"
+            "time": "2015-02-20 16:22:21"
         },
         {
             "name": "league/flysystem",
@@ -3262,6 +3262,7 @@
     "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
 }

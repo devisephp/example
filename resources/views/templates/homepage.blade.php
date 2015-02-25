@@ -27,8 +27,8 @@
 		<div class="container pb sp100">
 
 			<div class="row mt sp1">
-				<img data-devise="image1, image, First Image" class="fl" src="{{ $page->image1->image_url('/img/kirin-ichiban-garden.jpg') }}" width="{{ $page->image1->width(585) }}" height="{{ $page->image1->height(385) }}" alt="{{ $page->image1->caption('Kirin\'s Ichiban Gardens in Tokyo - Gary Williams - License MIT') }}">
-				<img data-devise="image2, image, Second Image" class="fr" src="{{ $page->image2->image_url('/img/odell-beers.jpg') }}" width="{{ $page->image2->width(584) }}" height="{{ $page->image2->height(385) }}" alt="{{ $page->image2->caption('A flight of beers at Odell\'s outside Boulder Colorado - Gary Williams - License MIT') }}">
+				<img data-devise="image1, image, First Image" class="img-responsive fl" style="border-right:1px solid #fff" src="{{ $page->image1->image_url('/img/kirin-ichiban-garden.jpg') }}" width="{{ $page->image1->width('50%') }}" alt="{{ $page->image1->caption('Kirin\'s Ichiban Gardens in Tokyo - Gary Williams - License MIT') }}">
+				<img data-devise="image2, image, Second Image" class="img-responsive fr" src="{{ $page->image2->image_url('/img/odell-beers.jpg') }}" width="{{ $page->image2->width('50%') }}" alt="{{ $page->image2->caption('A flight of beers at Odell\'s outside Boulder Colorado - Gary Williams - License MIT') }}">
 			</div>
 
 			<div class="row mt sp50 tac ">
