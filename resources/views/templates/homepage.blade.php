@@ -54,7 +54,7 @@
 			<div class="col-md-12">
 				<h4 data-devise="about_site_tagline, text, Tagline, About Site">{{ $page->about_site_tagline->text('About this site') }}</h4>
 				<p data-devise="about_site_description, wysiwyg, Description, About Site">{{ $page->about_site_description->text(lorem(68)) }}</p>
-				<a href="https://github.com/devisephp/cms" class="btn btn-primary fl mr sp50">Devise Website</a>
+				<a href="http://devisephp.com" class="btn btn-primary fl mr sp50">Devise Website</a>
 				<a href="https://github.com/devisephp/cms" class="btn btn-primary fl">Devise on Github</a>
 			</div>
 		</div>
