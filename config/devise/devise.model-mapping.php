@@ -36,4 +36,27 @@
 			'Password' => 'text',
 		],
 	],
+	'App\Brewer' =>
+	[
+		'rules' =>
+		[
+			'name' => 'required'
+		],
+
+		'picks' =>
+		[
+			'Name' => ['name' => 'text'],
+			'Address' => ['address' => 'text'],
+			'Description' => ['description' => 'wysiwyg'],
+			'Website' => ['website' => 'text'],
+		],
+
+		'types' =>
+		[
+			'Name' => 'text',
+			'Address' => 'text',
+			'Website' => 'text',
+			'Description' => 'wysiwyg',
+		],
+	]
 ];
