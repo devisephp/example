@@ -1,7 +1,7 @@
 @extends('layouts.application')
 
 @section('content')
-<div id="show" style="background-image:url('img/default-header.jpg')">
+<div id="show" style="background-image:url('/img/default-header.jpg')">
 
 	<div class="container pt sp500">
 
