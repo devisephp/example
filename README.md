@@ -1,23 +1,47 @@
-## Laravel PHP Framework
+Devise Brewers & Beers 
+======
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Stable Version](https://poser.pugx.org/devisephp/cms/v/stable.svg)](https://packagist.org/packages/devisephp/cms)
+[![Total Downloads](https://poser.pugx.org/devisephp/cms/downloads.svg)](https://packagist.org/packages/devisephp/cms)
+[![Latest Unstable Version](https://poser.pugx.org/devisephp/cms/v/unstable.svg)](https://packagist.org/packages/devisephp/cms)
+[![License](https://poser.pugx.org/devisephp/cms/license.svg)](https://packagist.org/packages/devisephp/cms)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+![alt text][logo]
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+##About
 
-## Official Documentation
+Devise Brewers & Beers is an example application built on the [Devise](http://github.com/devisephp/cms) content management system. It showcases the three major application structures of Devise:
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+1. Easy to implement and use front-end editing on a non-model content areas using html attributes. This is showcased throughout the homepage section of the site. My mom was able to make this content manageable... while drinking beers.
 
-## Contributing
+2. Dead-simple model editing is showcased on the brewer side of the application. Brewers has a model and a database table but you are able to utilize the Devise editor to edit your models.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+3. On the Beers site we recreate a 'CRUD' type scenario that shows how you can connect the front-end to your custom classes and execute custom code. 
+
+### Full Documentation
+
+Full documentation for Devise can be found at [http://devisephp.com/docs](http://devisephp.com/docs)
+
+### Installation of Brewers & Beers
+
+1. Setup an environment you want to install this example site on. We **highly** suggest you take a look at [Homestead](http://laravel.com/docs/5.0/homestead). It's worth it. 
+
+2. Download [Brewers & Beers](https://github.com/devisephp/example/archive/master.zip) by clicking that link or by clicking "Download Zip" up above.
+
+3. Unzip the contents of the zip into the root of your project. 
+
+4. From the command line run ```composer update```. If you don't have composer you can get it from here: [https://getcomposer.org/download/](https://getcomposer.org/download/).
+
+5. Install Devise by visiting the project through the browser or running ```php artisan devise:install``` from the project root on the command line. More information installing Devise at [http://devisephp.com/docs/installation/](http://devisephp.com/docs/installation/].
+
+6. Run migrations and seeds by running ```php artisan migrate``` and then ```php artisan db:seed```
+
+### Feedback
+
+Please give us your feedback on Devise and the Devise Bootstrap at [info@devisephp.com](info@devisephp.com)
 
 ### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+[logo]: https://raw.githubusercontent.com/devisephp/example/master/project-banner.jpg "Devise Brewers and Beers"
