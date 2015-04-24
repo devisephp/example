@@ -4,7 +4,7 @@
 <div id="homepage">
 	<div class="container pb sp100">
 
-		<img data-devise="homepage_image, image" src="{{ $page->homepage_image->image_url('/img/logo-homepage.png') }}" id="homepage-logo" width="{{ $page->homepage_image->width(412) }}" height="{{ $page->homeage_image->height(219) }}" alt="{{ $page->homepage_image->caption('Devise: Brewers &amp; Beers - An Example Application') }}">
+		<img data-devise="homepage_image, image" src="{{ $page->homepage_image->image('/img/logo-homepage.png') }}" id="homepage-logo" width="{{ $page->homepage_image->width(412) }}" height="{{ $page->homeage_image->height(219) }}" alt="{{ $page->homepage_image->caption('Devise: Brewers &amp; Beers - An Example Application') }}">
 
 		<a href="#beer-and-code" id="move-down-bottle-cap"><img src="/img/bottle-cap-down.png" width="59" height="59" alt="Click to go down"></a>
 
