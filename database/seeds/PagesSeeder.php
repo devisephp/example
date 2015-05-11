@@ -9,6 +9,10 @@ class PagesSeeder extends DatabaseSeeder {
      */
     protected function pages()
     {
+
+        // ensure devise's default home page has been removed
+        DB::table('dvs_pages')->where('slug','/')->delete();
+
         return
         [
             [
