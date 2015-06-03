@@ -32,7 +32,7 @@ Full documentation for Devise can be found at [http://devisephp.com/docs](http:/
 
 4. From the command line run ```composer update```. If you don't have composer you can get it from here: [https://getcomposer.org/download/](https://getcomposer.org/download/).
 
-5. Install Devise by visiting the project through the browser or running ```php artisan devise:install``` from the project root on the command line. More information installing Devise at [http://devisephp.com/docs/installation/](http://devisephp.com/docs/installation/].
+5. Install Devise by visiting the project through the browser or running ```php artisan devise:install``` from the project root on the command line. More information installing Devise at [http://devisephp.com/docs/installation/](http://devisephp.com/docs/installation/).
 
 6. Run migrations and seeds by running ```php artisan migrate``` and then ```php artisan db:seed```
 
