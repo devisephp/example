@@ -1,11 +1,6 @@
 Devise Brewers & Beers 
 ======
 
-[![Latest Stable Version](https://poser.pugx.org/devisephp/cms/v/stable.svg)](https://packagist.org/packages/devisephp/cms)
-[![Total Downloads](https://poser.pugx.org/devisephp/cms/downloads.svg)](https://packagist.org/packages/devisephp/cms)
-[![Latest Unstable Version](https://poser.pugx.org/devisephp/cms/v/unstable.svg)](https://packagist.org/packages/devisephp/cms)
-[![License](https://poser.pugx.org/devisephp/cms/license.svg)](https://packagist.org/packages/devisephp/cms)
-
 ![alt text][logo]
 
 ##About
