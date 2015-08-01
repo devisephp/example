@@ -16,6 +16,7 @@
 
     li {
       line-height:40px;
+      color:$sidenavLinkColor;
 
       a {
         display:block;
@@ -206,7 +207,7 @@
       background-color:$green;
       border-color:darken($green, 10%);
 
-      h3, p {
+      h3, p, label {
         color:#fff;
       }
     }
@@ -222,6 +223,9 @@
     }
 
     &.dvs-page-versions-card {
+      p {
+        font-size:12px;
+      }
 
       .dvs-card-top {
         height:10px;
@@ -229,7 +233,6 @@
       }
 
       &.live-card {
-
         .dvs-card-top {
           background-color:$green;
         }
@@ -237,11 +240,14 @@
         &:hover {
           background-color:$green;
         }
-
       }
 
-
       .dvs-card-bottom {
+        h4 {
+          font-size:18px;
+          @include wrapTextInParent();
+        }
+
         .dvs-badge {
           color:$white;
         }
@@ -327,12 +333,26 @@
 
   .dvs-select-wrapper {
     float:right;
-    width:150px;
-    font-size:11px;
-    padding:8px 12px;
+    width:auto;
+    padding:5px 30px 6px 6px;
+    font-size:10px;
+    margin-left:8px;
+
+    select {
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      height:100%;
+      -webkit-appearance:none; /* Important for Macs */
+    }
 
     .dvs-holder {
       background-color:transparent;
+    }
+
+    &:after {
+      top:43%;
     }
   }
 }
@@ -440,21 +460,39 @@ table.dvs-admin-table {
   }
 
   .dvs-publish-dates {
-
     p {
       margin: 10px 0;
+      @include wrapTextInParent();
     }
 
     input[type=text] {
-      min-width : 45%;
-      max-width : 100px;
+      width:100%;
+      float:left;
+      min-width : inherit;
+      max-width : inherit;
+      margin-left:0;
+      font-size:12px;
+      color:darken($french-gray, 25%);
+    }
+
+    label {
+      float:left;
+      margin-top:4px;
+      color:$dashboardCardTextColor;
+      font-size:11px;
+    }
+
+    input[type=submit] {
+      margin:8px auto 12px;
+      float:left;
+      clear:both;
+      display:block;
     }
   }
 
   .dvs-badge {
     &.dvs-content-requested {
       @include clearfix;
-
       margin:0 auto;
       margin-bottom:20px;
       padding:6px;

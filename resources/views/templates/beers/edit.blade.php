@@ -18,7 +18,7 @@
 
 				@include('layouts.errors')
 
-				{!! Form::open(['route' => array('beers-update', $beer->id), 'method' => 'put', 'class' => 'form-vertical', 'files' => true])!!}
+				{!! Form::open(['route' => array('beers-update', $beer->id), 'method' => 'put', 'class' => 'form-vertical dvs-allow-submit', 'files' => true])!!}
 					<div class="form-group">
 						<label for="beer-name">Beer Name</label>
 						<input type="text" class="form-control" id="beer-name" name="name" value="{{ $beer->name }}">
@@ -28,12 +28,12 @@
 
 						<div class="form-group col-md-5">
 							<label for="beer-brewery">Brewery</label>
-							{!! Form::select('brewer_id', array_merge([0 => 'Select a brewery'], $breweries), $beer->brewer_id, ['class' => 'form-control', 'id' => 'beer-brewery'])!!}
+							{!! Form::select('brewer_id', array_merge([0 => 'Select a brewery'], $breweries->toArray()), $beer->brewer_id, ['class' => 'form-control', 'id' => 'beer-brewery'])!!}
 						</div>
 
 						<div class="form-group col-md-5">
 							<label for="beer-type">Type</label>
-							{!! Form::select('beer_style_id', array_merge([0 => 'Select a style'], $beerStyles), $beer->beer_style_id, ['class' => 'form-control', 'id' => 'beer-style'])!!}
+							{!! Form::select('beer_style_id', array_merge([0 => 'Select a style'], $beerStyles->toArray()), $beer->beer_style_id, ['class' => 'form-control', 'id' => 'beer-style'])!!}
 						</div>
 
 						<div class="form-group col-md-2">

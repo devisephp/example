@@ -10,14 +10,23 @@ devise.define(['jquery', 'query', 'dvsSidebarView', 'dvsBaseView', 'dvsPositionH
     /**
      * The editor class we are building
      */
-    var Editor = function (templates, data)
+    var Editor = function (templates, data, csrf)
+    {
+        this.events = events;
+        this.csrf = csrf;
+        this.sidebar = new Sidebar(data);
+        this.updateData(data);
+    }
+
+    /**
+     * Updates the page data for this and sidebar.page
+     */
+   Editor.prototype.updateData = function (data)
     {
         this.pageId = data.pageId;
         this.pageVersionId = data.pageVersionId;
-        this.events = events;
         this.data = data;
-        this.sidebar = new Sidebar(data);
-        this.aboutPageTemplate = $('[data-template-name="about-page"]');
+        this.sidebar.page = data;
     }
 
     /**
@@ -26,6 +35,8 @@ devise.define(['jquery', 'query', 'dvsSidebarView', 'dvsBaseView', 'dvsPositionH
     Editor.prototype.start = function()
     {
         if (! this.shouldStart()) return false;
+
+        this.removeParentStyles();
 
         this.render();
 
@@ -37,11 +48,31 @@ devise.define(['jquery', 'query', 'dvsSidebarView', 'dvsBaseView', 'dvsPositionH
     }
 
     /**
+     * Removes all non-devise styles from parent page
+     * to keep them from overriding our stuff on the parent.
+     * This has the effect of sandboxing page specific
+     * styles inside of the dvs-iframe. We will try and keep
+     * our styles out of the sandboxed iframe.
+     */
+    Editor.prototype.removeParentStyles = function()
+    {
+        $('link[rel="stylesheet"], style').each(function(index, element)
+        {
+            var el = $(element);
+
+            if (typeof el.data('deviseEditorAsset') === 'undefined')
+            {
+                el.remove();
+            }
+        });
+    }
+
+    /**
      * render the editor layout
      */
     Editor.prototype.render = function()
     {
-        this.layoutView             = View.make('editor.layout', this.data);
+        this.layoutView             = $('#dvs-mode');
         this.iframeView             = this.layoutView.find('#dvs-iframe');
         this.nodesView              = $('<div/>');
         this.iframeBodyView         = $('<div/>');
@@ -55,9 +86,6 @@ devise.define(['jquery', 'query', 'dvsSidebarView', 'dvsBaseView', 'dvsPositionH
 
         this.aboutPageContainerView.empty();
         this.aboutPageContainerView.append(View.make('about-page'));
-
-        $('body').empty();
-        $('body').append(this.layoutView);
     }
 
     /**
@@ -204,7 +232,10 @@ devise.define(['jquery', 'query', 'dvsSidebarView', 'dvsBaseView', 'dvsPositionH
                 // the start-editor=false redirect (see above) will
                 // catch it
                 iframe.contents().find('a').each(function(index, el){
-                    $(el).attr('target', '_top');
+                    var attr = $(this).attr('target');
+                    if (typeof attr == typeof undefined || attr == '_self') {
+                        $(el).attr('target', '_top');
+                    }
                 });
 
                 // check for form submissions, and when we find one
@@ -215,7 +246,6 @@ devise.define(['jquery', 'query', 'dvsSidebarView', 'dvsBaseView', 'dvsPositionH
 
                 body.on('submit', 'form', function(e)
                 {
-                    console.log('submitting form', e);
                     e.preventDefault();
                 });
 
@@ -225,13 +255,16 @@ devise.define(['jquery', 'query', 'dvsSidebarView', 'dvsBaseView', 'dvsPositionH
                 if (editor.showingEditor) body.addClass('dvs-node-mode');
 
                 // copy over the database fields for live updates
-                editor.data.database = contentWindow.devise.dvsPageData.database;
+                editor.updateData(contentWindow.dvsPageData);
+
+                // update csrfToken
+                editor.csrf(editor.data.csrfToken);
 
                 // create a finder on this editor
                 editor.finder = new BindingsFinder(editor.data.database)
 
                 // find all the bindings
-                editor.bindings = editor.finder.find(contentWindow.document.children[0]);
+                editor.bindings = editor.finder.find(getRootHtmlNode(contentWindow.document.childNodes));
 
                 // apply the bindings now
                 editor.bindings.apply();
@@ -248,6 +281,22 @@ devise.define(['jquery', 'query', 'dvsSidebarView', 'dvsBaseView', 'dvsPositionH
         });
 
         iframe.attr('src', query.append('start-editor', 'false', location.origin + location.pathname + location.search)  + location.hash);
+    }
+
+    /**
+     * Finds the html node inside of this array of nodes
+     */
+    function getRootHtmlNode(nodes)
+    {
+        for (var i = 0; i < nodes.length; i++)
+        {
+            if (nodes[i].nodeType === 1)
+            {
+                return nodes[i];
+            }
+        }
+
+        return null;
     }
 
     /**

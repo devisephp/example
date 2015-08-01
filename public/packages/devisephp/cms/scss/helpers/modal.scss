@@ -34,24 +34,21 @@
    }
 
    #dvs-admin-modal {
-      position:absolute;
+      position:fixed;
       top:50%;
       left:50%;
       width:500px;
-
       margin-left:-250px;
       margin-top:-200px;
-
       z-index:20000;
 
       .dvs-admin-form-horizontal {
-         @include background-image(linear-gradient($bodyBgColor, darken($bodyBgColor, 5%)));
-         box-shadow: 0 0 12px rgba(0,0,0,0.4);
-
-         padding-top:30px;
+        padding-top:30px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.4);
+        @include background-image(linear-gradient($bodyBgColor, darken($bodyBgColor, 5%)));
 
          h4 {
-           color:$french-gray;
+          color:$french-gray;
          }
       }
    }
@@ -66,4 +63,3 @@
       z-index:12000;
    }
 }
-

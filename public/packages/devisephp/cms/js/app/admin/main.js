@@ -141,10 +141,10 @@ devise.define(['jquery', 'datetimepicker', 'dvsSelectSurrogate', 'dvsCsrf'], fun
 
         pageDetailsRow.toggleClass('dvs-collapsed');
 
-        if(pageDetailsRow.height() > 0) {
-            _clickedLink.text('- Collapse');
-        } else {
+        if(pageDetailsRow.hasClass('dvs-collapsed')) {
             _clickedLink.text('+ Expand Page Details');
+        } else {
+            _clickedLink.text('- Collapse');
         }
     }
 
@@ -197,7 +197,7 @@ devise.define(['jquery', 'datetimepicker', 'dvsSelectSurrogate', 'dvsCsrf'], fun
      * @return {integer}
      */
     function getSelectedVersionId($this) {
-        return $this.parent().parent().data('dvs-version-id');
+        return ($this.parent().parent().data('dvs-version-id')) ? $this.parent().parent().data('dvs-version-id') : $this.parent().data('dvs-version-id');
     }
 
     /**
@@ -205,7 +205,7 @@ devise.define(['jquery', 'datetimepicker', 'dvsSelectSurrogate', 'dvsCsrf'], fun
      * @return {integer}
      */
     function getSelectedPageId($this) {
-        return $this.parent().parent().data('dvs-page-id');
+        return $this.parent().parent().data('dvs-page-id') ? $this.parent().parent().data('dvs-page-id') : $this.parent().data('dvs-page-id');
     }
 
     /**

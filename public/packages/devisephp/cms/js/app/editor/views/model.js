@@ -29,11 +29,8 @@ devise.define(['jquery', 'dvsBaseView', 'dvsFieldView', 'dvsLiveUpdater'], funct
 		this.data['model'] = node.model;
 
 		this.field = $('<div/>');
-		this.grid = View.make('sidebar.models.grid', this.data);
-		this.sidebar.grid.append(this.grid);
+		this.renderGridView();
 		this.sidebar.breadcrumbsView.add(node.human_name, this, 'showGridView');
-
-		View.registerEvents(this.grid, events, this);
 
 		return this.field;
 	}
@@ -110,6 +107,7 @@ devise.define(['jquery', 'dvsBaseView', 'dvsFieldView', 'dvsLiveUpdater'], funct
 			'page': this.data.page.info
 		};
 
+		this.sidebar.layout.addClass('saving');
 		this.sidebar.validationErrors.empty();
 
 		$.ajax(url, {
@@ -156,13 +154,27 @@ devise.define(['jquery', 'dvsBaseView', 'dvsFieldView', 'dvsLiveUpdater'], funct
 	}
 
 	/**
+	 * Re-renders the grid view (useful when content
+	 * requested changes)
+	 */
+	ModelView.prototype.renderGridView = function()
+	{
+		this.grid = View.make('sidebar.models.grid', this.data);
+		this.sidebar.grid.empty();
+		this.sidebar.grid.append(this.grid);
+		View.registerEvents(this.grid, events, this);
+	}
+
+	/**
 	 * save was successful, update field values
 	 * to reflect what is returned from the server
 	 */
 	function onSaveSuccess(data, response, xhr)
 	{
+		this.sidebar.layout.removeClass('saving');
 		this.data.fields = data.fields;
 		this.sidebar.breadcrumbsView.back();
+		this.renderGridView();
 		this.showGridView();
 		LiveUpdater.changedModel(this.data.field);
 	}
@@ -182,6 +194,7 @@ devise.define(['jquery', 'dvsBaseView', 'dvsFieldView', 'dvsLiveUpdater'], funct
 		}
 
 		var html = View.make('sidebar.partials.errors', {'errors': xhr.responseJSON.errors});
+		this.sidebar.layout.removeClass('saving');
 		this.sidebar.validationErrors.empty();
 		this.sidebar.validationErrors.append(html);
 		this.sidebar.breadcrumbsView.back();

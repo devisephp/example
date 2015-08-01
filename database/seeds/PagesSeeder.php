@@ -104,6 +104,7 @@ class PagesSeeder extends DatabaseSeeder {
                 'response_type'           => 'View',
                 'response_path'           => '',
                 'response_params'         => '',
+                'before'                  => 'ifNotLoggedInGoToLogin',
             ],
             [
                 'language_id'             => '45',
@@ -134,6 +135,7 @@ class PagesSeeder extends DatabaseSeeder {
                 'response_type'           => 'View',
                 'response_path'           => '',
                 'response_params'         => '',
+                'before'                  => 'ifNotLoggedInGoToLogin',
             ],
             [
                 'language_id'             => '45',
@@ -149,6 +151,7 @@ class PagesSeeder extends DatabaseSeeder {
                 'response_type'           => 'Function',
                 'response_path'           => 'App\Http\Controllers\BeerController.store',
                 'response_params'         => 'input',
+                'before'                  => 'ifNotLoggedInGoToLogin',
             ],
             [
                 'language_id'             => '45',
@@ -164,6 +167,7 @@ class PagesSeeder extends DatabaseSeeder {
                 'response_type'           => 'Function',
                 'response_path'           => 'App\Http\Controllers\BeerController.update',
                 'response_params'         => 'params.beerId,input',
+                'before'                  => 'ifNotLoggedInGoToLogin',
             ],
         ];
     }
